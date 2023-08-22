@@ -25,6 +25,11 @@ public class PlayerMovement : MonoBehaviour
         MovePlayer();
     }
 
+    void LateUpdate()
+    {
+
+    }
+
     void MovePlayer()
     {
         // Get normalised axis input
