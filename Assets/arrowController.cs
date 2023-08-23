@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class arrowController : MonoBehaviour
 {
+
+    DamageInfo damageInfo = new DamageInfo();
+
     public float secsToSelfDestruct = 7f;
 
     void Start()
     {
+        damageInfo.type = DamageType.Arrow;
+        damageInfo.damageSource = this.gameObject;
+
+        this.tag = "Weapon";
         StartCoroutine(SelfDestruct());
     }
 
@@ -20,6 +27,11 @@ public class arrowController : MonoBehaviour
     {
         yield return new WaitForSeconds(secsToSelfDestruct);
         Destroy(gameObject);
+    }
+
+    public DamageInfo getDamageInfo()
+    {
+        return this.damageInfo;
     }
 
 }
