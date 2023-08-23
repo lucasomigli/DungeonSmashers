@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class arrowController : MonoBehaviour
+public class Arrow : Weapon
 {
 
     DamageInfo damageInfo = new DamageInfo();
