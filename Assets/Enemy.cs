@@ -6,8 +6,6 @@ public abstract class Enemy : NPC
 {
     public float walkingSpeed = 8f;
     public float rotateSpeed = 5f;
-    public GameObject target;
-
 
     public virtual void RotateTowardsTarget(Vector3 _targetPosition, float _rotateSpeed)
     {

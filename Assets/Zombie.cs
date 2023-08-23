@@ -5,8 +5,11 @@ using UnityEngine;
 public class Zombie : Enemy
 {
 
+    GameObject target;
+
     void Start()
     {
+        target = GameObject.FindWithTag("Player");
     }
 
     void Update()
@@ -27,7 +30,6 @@ public class Zombie : Enemy
         {
             DamageInfo damageInfo = other.collider.gameObject.GetComponent<Arrow>().getDamageInfo();
             TakeDamage(10f, damageInfo);
-            SaySomething();
             isDead();
         }
     }
