@@ -446,7 +446,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _life: 100
-  walkingSpeed: 2
+  walkingSpeed: 8
   rotateSpeed: 5
   target: {fileID: 1092127001}
 --- !u!1 &198982261 stripped

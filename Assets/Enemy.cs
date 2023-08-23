@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class Enemy : NPC
 {
-    public float walkingSpeed = 2f;
+    public float walkingSpeed = 8f;
     public float rotateSpeed = 5f;
     public GameObject target;
 
@@ -18,7 +18,7 @@ public abstract class Enemy : NPC
 
     public virtual void MoveTowardsTarget(Vector3 _targetPosition, float _walkingSpeed)
     {
-        Vector3 _moveVector = _targetPosition - transform.position;
+        Vector3 _moveVector = (_targetPosition - transform.position).normalized;
         GetComponent<Rigidbody>().MovePosition(transform.position + _moveVector * _walkingSpeed * Time.deltaTime);
     }
 }
